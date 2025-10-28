@@ -1,14 +1,15 @@
-#include <iostream.h>
-#include<conio.h>
-void main ()
+#include <iostream>
+// #include<conio.h>
+using namespace std;
+int main ()
 {
-clrscr();
-  char input;
+  string input;
   int dataType;
-  String _string;
+  string _string;
   cout << "*****************************************"<<endl;
   cout << "====WELCOME TO THE DETA TYPE PROGRAM====="<<endl;
   cout << "*****************************************"<<endl;
+  do{
   cout << "WHAT DATA TYPE DO YOU WANT TO KNOW : "<<endl;
   cout << "1.char\n2.char*\n3.short\n4.int\n5.long\n6.float\n7.double\n8.string"<<endl;
   cin>>dataType;
@@ -31,10 +32,17 @@ clrscr();
     cin>> _string ;
     cout << "string size : " << sizeof(_string) <<" bytes "<<endl;
   }
+  	cout << "DO YOU WANT TO CHECK ANOTHER DATA TYPE SIZE : "<<endl;
+  	cin>>input;
+  	if(input == "yes" || input == "Yes" || input == "y" || input == "Y"){
+  		continue;
+  	}else{
+  		break;
+  	}
+  }while(input == "yes" || input == "Yes" || input == "y");
   cout << "********************************************"<<endl;
   cout << "=====YOUR_PROGRAM_IS_DONE_SUSSFULLY!!!======"<<endl;
   cout << "********************************************"<<endl;
   // cout << "1.55 size : " << sizeof(1.35) << "' bytes "<<endl;
   // cout << "1,55L size : " << sizeof(1.45L) <<" bytes"<<endl; 
-getch();
 }
