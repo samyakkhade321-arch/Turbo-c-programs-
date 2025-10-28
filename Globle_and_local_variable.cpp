@@ -1,5 +1,5 @@
-# include <iostream.h>
-
+#include <iostream.h>
+#include 
 int m = 10; // global m
 void main ( ) { 
   int m = 20; //m redeclared, local to main 
